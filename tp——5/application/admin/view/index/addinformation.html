@@ -1,0 +1,47 @@
+{extend name='base'/}
+{block name='content'}
+<form action="" method="post">
+    <div class="form-group">
+        <label for="">Title</label>
+        <input type="text" class="form-control" placeholder="Title" name="title">
+    </div>
+    <div class="form-group">
+        <label for="">Source</label>
+        <input type="text" class="form-control" placeholder="Source" name="source">
+    </div>
+    <label class="radio-inline">
+        <input type="radio" name="type" value="1">行业资讯
+    </label>
+    <label class="radio-inline">
+        <input type="radio" name="type" value="2">行业知识
+    </label>
+    <div class="form-group">
+        <label for="">Content</label>
+        <textarea name="content" style="width:100%;height:300px;visibility:hidden;" placeholder="Content"></textarea>
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+</form>
+<script src="/static/kindeditor/kindeditor.js"></script>
+<script>
+    KindEditor.ready(function (K) {
+        var editor1 = K.create('textarea[name="content"]', {
+            cssPath: '/static/kindeditor/plugins/code/prettify.css',
+            uploadJson: '/static/kindeditor/php/upload_json.php',
+            fileManagerJson: '/static/kindeditor/php/file_manager_json.php',
+            allowFileManager: true,
+            afterCreate: function () {
+                var self = this;
+                K.ctrl(document, 13, function () {
+                    self.sync();
+                    K('form[name=example]')[0].submit();
+                });
+                K.ctrl(self.edit.doc, 13, function () {
+                    self.sync();
+                    K('form[name=example]')[0].submit();
+                });
+            }
+        });
+        prettyPrint();
+    });
+</script>
+{/block}

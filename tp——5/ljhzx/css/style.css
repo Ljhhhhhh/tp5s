@@ -1,0 +1,83 @@
+.navbar {
+  margin-bottom: 0;
+}
+.m30 {
+  margin: 30px auto;
+}
+.m20 {
+  margin: 20px auto;
+}
+.lmbt {
+  padding-bottom: 20px;
+  background: url("../img/lmbt.png") no-repeat 50% 80%;
+}
+.content {
+  text-indent: 2em;
+  line-height: 25px;
+  font-size: 14px;
+}
+h2 {
+  font-weight: 300;
+}
+h2 small {
+  display: inline-block;
+  padding-left: 5px;
+  color: #666;
+  font-weight: 300;
+  font-style: italic;
+}
+.navbar-header .navbar-brand {
+  padding: 5px 15px;
+}
+.navbar-header .navbar-brand img {
+  width: auto;
+  height: 100%;
+}
+#product {
+  margin: 30px auto;
+}
+#product .lunbo_box a {
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 18px;
+}
+#product .lunbo_box a img {
+  width: 100%;
+  height: auto;
+}
+#about_us {
+  margin: 30px auto;
+  border: 1px solid #E5E5E5;
+  padding-bottom: 15px;
+  border-radius: 5px;
+}
+#myTabContent ul {
+  padding: 15px 0;
+}
+#myTabContent ul li {
+  list-style-type: none;
+  display: inline-block;
+}
+#myTabContent ul li a {
+  text-decoration: none;
+  color: #3f3F3F;
+}
+#myTabContent ul li a h4 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#myTabContent ul li a p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+}
+#contact {
+  margin: 30px auto;
+}
+.child_banner {
+  width: 100%;
+  height: auto;
+}
